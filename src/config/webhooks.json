@@ -1,0 +1,62 @@
+{
+    "startLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "shardLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "errorLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "dmLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "voiceLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "serverLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "serverLogs2": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "commandLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "consoleLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "warnLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "voiceErrorLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "creditLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "evalLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "interactionLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    },
+    "bugReportLogs": {
+        "id": "webhook-id",
+        "token": "webhook-token"
+    }
+}
