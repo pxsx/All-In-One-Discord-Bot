@@ -66,14 +66,14 @@ module.exports = async (client, interaction, args) => {
                     .setStyle(Discord.ButtonStyle.Danger),
             );
 
-        client.embed({
-            title: `👰・Marriage proposal`,
-            desc: `${author} has ${target} asked to propose him! \n${target} click on one of the buttons`,
-            components: [row],
-            content: `${target}`,
-            type: 'editreply'
-        }, interaction);
-
+            client.embed({
+                title: `👰・Marriage proposal`,
+                desc: `${author.toString()} has asked to propose to ${target.toString()}! \n${target.toString()} click on one of the buttons`,
+                components: [row],
+                content: `${target.toString()}`,
+                type: 'editreply'
+            }, interaction);
+            
         const filter = i => i.user.id === target.id;
 
         interaction.channel.awaitMessageComponent({ filter, componentType: Discord.ComponentType.Button, time: 60000 }).then(async i => {
@@ -109,28 +109,27 @@ module.exports = async (client, interaction, args) => {
 
                 client.embed({
                     title: `👰・Marriage proposal - Approved`,
-                    desc: `${author} and ${target} are now married! 👰🎉`,
+                    desc: `${author.toString()} and ${target.toString()} are now married! 👰🎉`,
                     components: [],
-                    content: `${target}`,
+                    content: `${target.toString()}`,
                     type: 'editreply'
                 }, interaction);
             }
 
-            if (i.customId == "propose_deny") {
-                client.embed({
-                    title: `👰・Marriage proposal - Denied`,
-                    desc: `${target} loves someone else and chose not to marry ${author}`,
-                    components: [],
-                    content: `${target}`,
-                    type: 'editreply'
-                }, interaction);
-            }
+            client.embed({
+                title: `👰・Marriage proposal - Denied`,
+                desc: `${target.toString()} loves someone else and chose not to marry ${author.toString()}`,
+                components: [],
+                content: `${target.toString()}`,
+                type: 'editreply'
+            }, interaction);
+
         }).catch(() => {
             client.embed({
                 title: `👰・Marriage proposal - Denied`,
-                desc: `${target} has not answered anything! The wedding is canceled`,
+                desc: `${target.toString()} has not answered anything! The wedding is canceled`,
                 components: [],
-                content: `${target}`,
+                content: `${target.toString()}`,
                 type: 'editreply'
             }, interaction);
         });
